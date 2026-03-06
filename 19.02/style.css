@@ -1,0 +1,380 @@
+@font-face {
+    font-family: 'gang';
+    src: url('../19.02/fontes/gang_of_three/go3v2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* --- CONFIGURAÇÕES GLOBAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-family: gang !important;
+}
+
+.logo{
+    height: 100px;
+    width: 100px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-family: gang !important;
+}
+
+.nav-links a:hover {
+    color: #cc0000;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('/assets/img/inauguracao.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 80px; 
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    max-width: 800px;
+    text-align: center; 
+}
+
+
+.about {
+    background-color: #cc0000;
+    color: #fff;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+
+
+/* Fundo da seção */
+.gallery {
+    padding: 60px 0;
+    background-color: #000; 
+}
+
+.gallery h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #fff; 
+    text-align: center;
+}
+
+
+.gallery-wrapper {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    max-width: 900px; 
+    margin: 0 auto;
+    gap: 15px; 
+}
+
+
+.slider-container {
+    width: 100%; 
+    max-width: 700px; 
+    overflow: hidden; 
+    border-radius: 8px;
+    flex-grow: 1; 
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.gallery {
+    padding: 60px 0;
+    background-color: #000;
+}
+
+.gallery h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #fff;
+    text-align: center;
+}
+
+.gallery-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px; 
+    margin: 0 auto;
+    gap: 15px; 
+}
+
+.slider-container {
+    flex-grow: 1; 
+    max-width: 700px;
+    height: 450px; 
+    overflow: hidden; 
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    background-color: #222;
+}
+
+.slider {
+    display: flex; 
+    width: fit-content; 
+    height: 100%; 
+    transition: transform 0.5s ease-in-out; 
+}
+
+
+.slide {
+    min-width: 700px; 
+    height: 100%; 
+    flex-shrink: 0; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+
+.slide img {
+    max-width: 100%;
+    max-height: 100%; 
+    width: auto; 
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+}
+
+
+.slider-btn {
+    background-color: #e62b1e;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+    display: flex; /* Para centralizar o ícone */
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-btn:hover {
+    background-color: #b31f16;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .gallery-wrapper {
+        flex-direction: column;
+        max-width: 95%;
+    }}
+    .slider-container {
+        height: 300px; 
+    }
+    .slide {
+        min-width: 100%; 
+    .slider-btn {
+        margin-top: 15px; 
+    }
+}
+
+.services {
+    background-color: #cc0000; 
+    color: #fff;
+    padding: 40px 0;
+}
+
+.services h2 {
+    margin-bottom: 30px;
+}
+
+.services-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    gap: 40px;
+}
+
+.services-list {
+    flex: 2; 
+    background-color: #bb4b4b; 
+    padding: 50px;
+    border-radius: 0px;
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 250px; 
+}
+
+.services-list h3 {
+    font-size: 1.8rem; 
+    margin-bottom: 0px; 
+    padding-bottom: 0px; 
+    border-bottom: none; 
+    text-align: left;
+}
+
+
+.services-partners {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px; 
+}
+
+.services-partners h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.services-partners img {
+    max-width: 150px; 
+    height: auto;
+    display: block;
+    margin-bottom: 0;
+}
+
+
+
+.location {
+    background: #232323; 
+    color: #fff;
+    padding: 60px 0;
+}
+
+.location h2 {
+    margin-bottom: 30px;
+}
+
+.location-content {
+    display: flex;
+    align-items: center; 
+    gap: 40px;
+}
+
+.map {
+    flex: 1;
+}
+
+.map iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    border-radius: 0px; 
+}
+
+.address {
+    flex: 1;
+}
+
+.address p {
+    font-size: 1.8rem;
+    line-height: 1.4; 
+}
+
+
+
+.contacts {
+    text-align: center;
+    background-color: #cc0000; 
+    color: #fff;
+    padding: 40px 0; 
+}
+
+.contacts h2 {
+    margin-bottom: 30px; 
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; 
+    margin-top: 0px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem; 
+    transition: none;
+}
+
+.contact-item:hover {
+    transform: none;
+}
+
+.contact-item i {
+    font-size: 2.2rem; 
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
