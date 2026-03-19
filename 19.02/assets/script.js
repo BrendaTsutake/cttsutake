@@ -22,8 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateSliderPosition() {
         slider.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
     }
-
-    // Inicializa ao carregar o DOM
     calculateSlideWidthAndPosition();
 
     nextBtn.addEventListener('click', () => {
@@ -44,10 +42,18 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSliderPosition();
     });
 
-    // Recalcula a largura do slide e a posição sempre que a janela é redimensionada
+    // recalcula a largura do slide e a posição sempre que a janela é redimensionada
     window.addEventListener('resize', calculateSlideWidthAndPosition);
 
-    // Recalcula a largura do slide e a posição depois que TODOS os recursos (incluindo imagens) foram carregados
-    // Isso é crucial para garantir que as imagens tenham suas dimensões finais antes do cálculo
+    // recalcula a largura do slide e a posição depois que TODOS os recursos (incluindo imagens) foram carregados
+    // garante que as imagens tenham suas dimensões finais antes do cálculo
     window.addEventListener('load', calculateSlideWidthAndPosition);
 });
+
+function openNav() {
+    document.getElementById("contactSidebar").style.width="300px";
+}
+
+function closeNav() {
+    document.getElementById("contactSidebar").style.width="0";
+}

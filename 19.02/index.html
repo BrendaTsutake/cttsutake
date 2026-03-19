@@ -16,12 +16,12 @@
                 <img src="/assets/img/loho.jpg" alt="Logo CT Tsutake">
             </div>
             <ul class="nav-links">
-                <li><a href="#inicio">Início</a></li>
+                <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#quem-somos">Quem somos</a></li>
                 <li><a href="#galeria">Galeria de Fotos</a></li>
                 <li><a href="#planos">Planos e serviços</a></li>
                 <li><a href="#localizacao">Localização</a></li>
-                <li><a href="#contatos">Contatos</a></li>
+                <li><a href="javascript:void(0)" onclick="openNav()">Contatos</a></li>
             </ul>
         </nav>
     </header>
@@ -66,7 +66,6 @@
                             <div class="slide"><img src="/assets/img/MetaExperience.jpeg" alt="Foto 3"></div> 
                             <div class="slide"><img src="/assets/img/inauguracao.jpg" alt="Foto 4"></div>
                             <div class="slide"><img src="/assets/img/quem somos.jpg" alt="Foto 5"></div> 
-                            <div class="slide"><img src="/assets/img/2 anos.jpg" alt="Foto 6"></div> 
                         </div>
                     </div>
         
@@ -76,7 +75,7 @@
         </section>
 <section id="planos" class="services">
     <div class="container">
-        <h2>Planos e serviços</h2>
+        <h2><center>Planos e serviços</center></h2>
         <div class="services-content">
             <div class="services-list">
                 <h3>CrossTraining</h3>
@@ -87,7 +86,7 @@
                 <p><strong>Wellhub -</strong> A partir do plano Silver </p>
                 <p><strong>Totalpass -</strong> A partir do plano TP2 </p>
                 <h3>Pilates</h3>
-                     *Os planos devem ser consultados através do whatsapp ou instagram*
+                     *Os planos a parte devem ser consultados através do whatsapp ou instagram*
                      <p>Wellhub - A partir do plano Silver </p>
                      <p>Totalpass - A partir do plano TP2 </p>
                 <h3>CrossKids</h3>
@@ -107,7 +106,7 @@
         
                 <section id="localizacao" class="location">
                     <div class="container">
-                        <h2>Localização</h2>
+                        <h2><center>Localização</center></h2>
                         <div class="location-content">
                             
                             <div class="map">
@@ -124,29 +123,26 @@
                     </div>
                 </section>
                 
-                <section id="contatos" class="contacts">
-                    <div class="container">
-                        <h2><center>Contatos</center></h2>
-                        <div class="contact-info">
-                            
-                            <a href="https://www.instagram.com/ct.tsutake/" target="_blank" class="contact-item">
-                            <i class="fab fa-instagram"></i>
-                                <span>@ct.tsutake</span>
-                            </a>
-        
-                            <a href="https://wa.me/5511918770148" target="_blank" class="contact-item">
-                                <i class="fab fa-whatsapp"></i>
-                                <span>+55 11 91877-0148</span>
-                            </a>
-                        </div>
-                    </div>
-                </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Brenda S. Tsutake. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Brenda S. Tsutake. Todos os direitos reservados.</p>
     </footer>
 
     <script src="/assets/script.js"></script>
 </body>
+<div id="contactSidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="sidebar-content">
+        <h2><center>Entre em contato conosco</center></h2>
+        <hr>
+        <br>
+         <a href="https://www.instagram.com/ct.tsutake/" target="_blank" class="contact-btn">
+        <p><i class="fab fa-instagram"></i>ct.tsutake</p>
+    </a>
+         <a href="https://wa.me/5511918770148" target="_blank" class="contact-btn">
+        <p><i class="fab fa-whatsapp"></i>+55 11 91877-0148</p>
+    </a>
+    </div>
+</div>
 </html>

@@ -1,5 +1,9 @@
 
-/* --- CONFIGURAÇÕES GLOBAIS --- */
+@font-face {
+    font-family: 'gang';
+    src: url('../assets/fontes/gang_of_three/go3v2.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +25,6 @@ body {
     padding: 0 20px;
 }
 
-/* Alinha os títulos das seções à esquerda por padrão, como no print */
 h1, h2 {
     margin-bottom: 20px;
     text-align: left; /* Adicionado para alinhar como no print */
@@ -31,7 +34,6 @@ section {
     padding: 60px 0;
 }
 
-/* --- 1. CABEÇALHO E NAVEGAÇÃO (MANTIDO) --- */
 header {
     background: rgba(34, 34, 34, 0.9);
     color: #fff;
@@ -48,19 +50,25 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+     background-image: linear-gradient(#e62b1e, #470808);
+     padding: 1rem;
 }
 
 .logo img {
-    height: 40px;
+    height: 80px;
+    width: 80px;
+    border-radius: 18px;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
+    font-size: medium;
 }
 
 .nav-links li {
     margin-left: 20px;
+    font-size: medium;
 }
 
 .nav-links a {
@@ -68,13 +76,15 @@ header {
     color: #fff;
     font-weight: bold;
     transition: color 0.3s ease;
+    font-family: 'gang', Arial, sans-serif !important;
+    font-size: medium;
 }
 
 .nav-links a:hover {
-    color: #cc0000;
+    color: #200606;
+    font-size: large;
 }
 
-/* --- 2. SEÇÃO DE INÍCIO (HERO - MANTIDO) --- */
 .hero {
     height: 100vh;
     background-image: url('/assets/img/inauguracao.jpg');
@@ -94,10 +104,8 @@ header {
 .hero-content h1 {
     font-size: 2.5rem;
     max-width: 800px;
-    text-align: center; /* Centraliza o título do hero */
+    text-align: center; 
 }
-
-/* --- 3. SEÇÃO QUEM SOMOS (MANTIDO) --- */
 .about {
     background-color: #cc0000;
     color: #fff;
@@ -127,48 +135,41 @@ header {
     margin-bottom: 15px;
 }
 
-/* --- CSS COMPLETO PARA A GALERIA (COPIE E COLE) --- */
 
 /* Fundo da seção */
 .gallery {
     padding: 60px 0;
-    background-color: #000; /* Fundo preto */
+    background-color: #000; 
 }
 
 .gallery h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
-    color: #fff; /* Título branco */
+    color: #fff; 
     text-align: center;
 }
 
-/* 1. O NOVO WRAPPER (Essencial) */
-/* Usa flexbox para alinhar: [BOTÃO] [SLIDER] [BOTÃO] */
 .gallery-wrapper {
     display: flex;
-    align-items: center; /* Centraliza botões e slider verticalmente */
+    align-items: center; 
     justify-content: center;
-    max-width: 900px; /* Largura total (slider + botões) */
+    max-width: 900px; 
     margin: 0 auto;
-    gap: 15px; /* Espaço entre botões e slider */
+    gap: 15px; 
 }
 
-/* 2. O CONTAINER DO SLIDER (A "Janela" que esconde) */
 .slider-container {
-    width: 100%; /* Ocupa o espaço disponível no flex */
-    max-width: 700px; /* Largura da imagem visível */
-    overflow: hidden; /* <-- A MÁGICA DO SLIDER ACONTECE AQUI */
+    width: 100%; 
+    max-width: 700px; 
+    overflow: hidden; 
     border-radius: 8px;
-    flex-grow: 1; /* Faz o container crescer */
+    flex-grow: 1; 
 }
 
-/* 3. A FAIXA DE IMAGENS (O que se move) */
 .slider {
-    display: flex; /* Bota as imagens lado a lado */
-    transition: transform 0.5s ease-in-out; /* Animação */
+    display: flex;
+    transition: transform 0.5s ease-in-out; 
 }
-
-/* --- CSS OTIMIZADO PARA A GALERIA (COPIE E COLE TUDO) --- */
 
 .gallery {
     padding: 60px 0;
@@ -182,53 +183,51 @@ header {
     text-align: center;
 }
 
-/* O wrapper que alinha botões e slider horizontalmente */
 .gallery-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 900px; /* Largura máxima para todo o layout */
+    max-width: 900px; 
     margin: 0 auto;
-    gap: 15px; /* Espaçamento entre os elementos */
+    gap: 15px; 
 }
 
-/* O container que ATUA como a "janela" do slider */
 .slider-container {
-    flex-grow: 1; /* Permite que ele preencha o espaço entre os botões */
-    max-width: 700px; /* Largura máxima da imagem visível */
-    height: 450px; /* **DEFINIMOS UMA ALTURA FIXA AQUI** */
-    overflow: hidden; /* **ESSENCIAL**: Esconde tudo que está fora desta área */
-    position: relative; /* Para garantir que o z-index ou outros posicionamentos funcionem */
+    flex-grow: 1; 
+    max-width: 700px; 
+    height: 450px; 
+    overflow: hidden; 
+    position: relative; 
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    background-color: #222; /* Cor de fundo para o slider-container, se a imagem não preencher tudo */
+    background-color: #000000; 
 }
 
-/* A faixa real de slides que se move */
+
 .slider {
-    display: flex; /* Coloca os slides lado a lado */
-    width: fit-content; /* Permite que o slider seja tão largo quanto o conteúdo total dos slides */
-    height: 100%; /* Ocupa a altura total do slider-container */
-    transition: transform 0.5s ease-in-out; /* Animação suave */
+    display: flex; 
+    width: fit-content; 
+    height: 100%; 
+    transition: transform 0.5s ease-in-out; 
 }
 
 /* Cada slide individual */
 .slide {
-    min-width: 700px; /* **CRÍTICO**: Define a largura de CADA slide para a max-width do container */
-    height: 100%; /* Ocupa a altura total do slider */
-    flex-shrink: 0; /* Impede que o slide encolha */
-    display: flex; /* Para centralizar a imagem dentro do slide */
+    min-width: 700px; 
+    height: 100%; 
+    flex-shrink: 0; 
+    display: flex; 
     align-items: center;
     justify-content: center;
 }
 
 /* As imagens dentro de cada slide */
 .slide img {
-    max-width: 100%; /* Garante que a imagem não transborde a largura do slide */
-    max-height: 100%; /* Garante que a imagem não transborde a altura do slide */
-    width: auto; /* Permite que a largura e altura se ajustem, mantendo a proporção */
+    max-width: 100%; 
+    max-height: 100%; 
+    width: auto; 
     height: auto;
-    object-fit: contain; /* **CRÍTICO**: Faz a imagem caber inteira no espaço, sem cortar */
+    object-fit: contain; 
     display: block;
     border-radius: 8px;
 }
@@ -246,7 +245,7 @@ header {
     z-index: 10;
     transition: background-color 0.3s ease;
     flex-shrink: 0;
-    display: flex; /* Para centralizar o ícone */
+    display: flex; 
     align-items: center;
     justify-content: center;
 }
@@ -258,7 +257,7 @@ header {
 /* Responsividade */
 @media (max-width: 768px) {
     .gallery-wrapper {
-        flex-direction: column; /* Empilha em telas menores */
+        flex-direction: column;
         max-width: 95%;
     }
     .slider-container {
@@ -268,29 +267,29 @@ header {
         min-width: 100%; /* Ocupa 100% da largura do slider-container responsivo */
     }
     .slider-btn {
-        margin-top: 15px; /* Espaço quando empilhados */
+        margin-top: 15px; 
     }
 }
-/* --- 5. SEÇÃO PLANOS E SERVIÇOS (AJUSTADO PARA SER EXATO) --- */
+
 .services {
-    background-color: #cc0000; /* Vermelho principal */
+    background-color: #cc0000; 
     color: #fff;
-    padding: 40px 0; /* Ajustado padding */
+    padding: 40px 0; 
 }
 
 .services h2 {
-    margin-bottom: 30px; /* Mais espaço abaixo do título */
+    margin-bottom: 30px; 
 }
 
 .services-content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Alinha o topo dos containers */
+    align-items: flex-start; 
     gap: 40px;
 }
 
 .services-list {
-    flex: 2; /* Ocupa mais espaço que os parceiros */
+    flex: 2; 
     background-color: #bb4b4b; 
     padding: 50px;
     border-radius: 0px;
@@ -331,7 +330,6 @@ header {
 }
 
 
-/* --- 6. SEÇÃO LOCALIZAÇÃO--- */
 .location {
     background: #232323; 
     color: #fff;
@@ -367,48 +365,64 @@ header {
     font-size: 1.8rem;
     line-height: 1.4; 
 }
+ .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0%;
+    right: 0%;
+    background-color: #d10000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+ }
 
-
-/* --- 7. SEÇÃO CONTATOS--- */
-.contacts {
-    text-align: center;
-    background-color: #cc0000; 
-    color: #fff;
-    padding: 40px 0; 
-}
-
-.contacts h2 {
-    margin-bottom: 30px; 
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px; 
-    margin-top: 0px;
-}
-
-.contact-item {
+ .sidebar-content a.contact-btn {
     display: flex;
     align-items: center;
-    gap: 5px;
+    justify-content: center;
     text-decoration: none;
-    color: #fff;
-    font-size: 1.5rem; 
-    transition: none;
-}
+    background-color: #fff;
+    color: #d10000;
+    border-radius: 25px;
+    padding: 12px 24px;
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3 ease;
+    width: auto;
+    min-width: 200px;
+ }
 
-.contact-item:hover {
-    transform: none;
-}
+ .sidebar-content a.contact-btn:hover {
+    background-color: #f0f0f0;
+    color: #a00000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 
-.contact-item i {
-    font-size: 2.2rem; 
-}
+ }
+
+ .sidebar-content a.contact-btn i {
+    margin-right: 10px;
+    font-size: 1.2em;
+ }
+
+ .sidebar .closebtn {
+    position: absolute;
+    top: 0%;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: white;
+    text-decoration: none;
+
+ }
 
 
-/* --- RODAPÉ (MANTIDO) --- */
 footer {
     background: #222;
     color: #fff;
